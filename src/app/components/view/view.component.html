@@ -1,0 +1,23 @@
+<!-- <ul>
+    <li>
+        <button routerLink="/view/user"> View User List</button>
+    </li>
+    <li>
+        <button routerLink="/view/client"> View Client ID</button>
+    </li>
+</ul> -->
+<!-- <router-outlet></router-outlet> -->
+<h1>User Detials</h1>
+<div class="ag-grid" style="margin-top: 6rem; margin: auto">
+<ag-grid-angular 
+    style="width: auto; height: 400px; align-items: center; margin: auto" 
+    class="ag-theme-balham"
+    [rowData]="rowData" 
+    [columnDefs]="columnDefs" 
+    [defaultColDef]="defaultColDef"
+    [pagination]="true"
+    [paginationPageSize]="10"
+    rowSelection="multiple"
+
+    ></ag-grid-angular>
+</div>

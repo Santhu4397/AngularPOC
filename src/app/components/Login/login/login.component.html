@@ -1,0 +1,19 @@
+<form [formGroup]="LoginFrom" (ngSubmit)="login1()" align="center" >
+  <h1><b>Login</b></h1>
+  <div class="container" style="margin-left: auto;/* margin-block: 38px; */margin-right: auto;">
+  <table  >
+    <tr>
+      <td >  <label for="uname"><b>Email ID</b></label></td>
+      <td ><input type="text" placeholder="Enter Email" formControlName="email" required></td>
+    </tr>
+    <tr>
+      <td> <label for="psw"><b>Password</b></label></td>
+      <td><input type="password" placeholder="Enter Password" formControlName="pws" required></td>
+    </tr>
+      <tr>
+      <td><button type="submit">Login</button></td>
+    </tr>
+    
+  </table>
+    </div>
+  </form>

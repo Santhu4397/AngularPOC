@@ -1,0 +1,37 @@
+
+
+<div class="container" style="margin-left: auto;/* margin-block: 38px; */margin-right: auto;"> 
+  <h1 align="center">User Details</h1>
+    <form [formGroup]="userdata" (ngSubmit)="sendUserData()">
+    <label for="uname"><b>Name</b></label>
+    <input type="text" placeholder="UserName" formControlName="name">
+    <label for="uname"><b>Email</b></label>
+    <input  type="email" placeholder="email" formControlName="email">
+    <label for="uname"><b>Password</b></label>
+    <input  type="password" placeholder="Password" formControlName="pws">
+    <!-- <label for="uname"><b>ProductName</b></label>
+     <select id="product" formControlName="productName">
+      <option value="Mobile">Mobile</option>
+      <option value="PC">PC</option>
+      <option value="Laptop">LAptop</option>
+    </select> -->
+    <label for="uname"><b>ProductName</b></label><br>
+<mat-form-field  >
+  <select matNativeControl required formControlName="productName"> 
+    <option value="Mobile">Mobile</option>
+    <option value="PC">PC</option>
+    <option value="Laptop">Laptop</option>
+  </select>
+</mat-form-field><br>
+
+     <label for="uname"><b>UserEndDate</b></label>
+    <input type="date" placeholder="mm/dd/yyyy" formControlName="userEndDate"><br>
+    <label for="uname"><b>UserStartDate</b></label>
+    <input type="date" placeholder="mm/dd/yyyy" formControlName="userStartDate"><br>
+
+    <input type="submit"   value="Submit" />
+    
+    
+  </form>
+</div>
+

@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-balham.css";
+h1 {
+    text-align: center;
+    
+}
+body{
+    background-color: rgb(128, 142, 137);
+}
+ag-grid-angular {
+    background-color: black;
+}
+/* .gridcontainer{
+    background-color: rgb(251, 251, 251);
+    display: grid;
+   grid-template-columns: 3fr 2fr 1fr;
+    grid-gap: 10px;
+}
+.gridItem1{
+    background-color: rgb(20, 52, 230);
+}
+.gridItem2{
+    background-color: rgb(77, 101, 236);
+}
+.gridItem3{
+    background-color: rgb(104, 120, 209);
+} */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

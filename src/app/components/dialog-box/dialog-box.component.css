@@ -1,0 +1,26 @@
+::ng-deep #dialogTrasparent{
+    padding: 0px !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  
+  }
+
+  ::ng-deep .mat-dialog-container{
+    background-color: rgb(48, 46, 45);
+    width: 20rem;
+    height: 10rem;
+    color: white;
+  
+
+  }
+  button {
+    background-color: #137ae9; 
+    border: none;
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+  }
