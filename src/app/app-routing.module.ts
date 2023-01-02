@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 import { ClilistComponent } from './components/clilist/clilist.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/Login/login/login.component';
 import { PostComponent } from './components/post/post.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { TermsComponent } from './components/terms/terms.component';
+import { UpdatedialogComponent } from './components/updatedialog/updatedialog.component';
 import { UserlistComponent } from './components/userlist/userlist.component';
 import { ViewNameComponent } from './components/view-name/view-name.component';
 import { ViewComponent } from './components/view/view.component';
@@ -48,6 +50,10 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path:"about",
+    component:AboutComponent
+  },
+  {
     path: "profile",
     canActivate: [AuthGuard],
     component: ProfileComponent,
@@ -58,10 +64,15 @@ const routes: Routes = [
    
     component: PostComponent,
   },
+  {
+    path: "updateuser",
+   
+   
+    component: UpdatedialogComponent,
+  },
   
   {
     path: "contact",
-   canLoad: [LazyauthGuard],
     loadChildren: () => import("./components/contact/contact.module").then(m => m.ContactModule)
   }
 ];

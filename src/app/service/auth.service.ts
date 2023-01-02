@@ -2,6 +2,7 @@ import {  Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 import { DialogBoxComponent } from '../components/dialog-box/dialog-box.component';
+import { BehaviorSubjectService } from './behaviorsubjectservice';
 
 
 @Injectable({
@@ -12,11 +13,11 @@ export class AuthService {
   User = new BehaviorSubject<any>(null);
   
   data!:any;
-  constructor(public dialog:MatDialog) { }
+  constructor(public dialog:MatDialog,private behaviorService:BehaviorSubjectService) { }
 
   public get UserSubjectValue() {
-    if (this.User) {
-      return this.User.value;
+    if (this.behaviorService.loginUserData) {
+      return this.behaviorService.loginUserData.value;
     } else {
       return null
     }
@@ -27,7 +28,8 @@ export class AuthService {
     this.data=data
    
     this.openAlertDialog('Login Successful '+data.name)
-    this.User.next(data);
+    this.behaviorService.setLoginUserData(data)
+    //this.User.next(data);
     return data
     
   }

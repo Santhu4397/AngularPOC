@@ -8,6 +8,11 @@
 </ul> -->
 <!-- <router-outlet></router-outlet> -->
 <h1>User Detials</h1>
+<div >
+    <a routerLink="/saveuser"><button style="background-color:#24a0ed;
+        border-radius: 10px; cursor: pointer; color:white; font-size: inherit; outline: auto; ">Create new User</button></a>
+  
+</div>
 <div class="ag-grid" style="margin-top: 6rem; margin: auto">
 <ag-grid-angular 
     style="width: auto; height: 400px; align-items: center; margin: auto" 
@@ -18,6 +23,5 @@
     [pagination]="true"
     [paginationPageSize]="10"
     rowSelection="multiple"
-
     ></ag-grid-angular>
 </div>

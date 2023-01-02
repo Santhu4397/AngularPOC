@@ -17,7 +17,8 @@ import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 })
 export class PostComponent implements OnInit {
 
-  constructor(private url:APiService, private router:Router ,private  http:HttpClient,private _snackBar: MatSnackBar,public dialog:MatDialog,private datePipe: DatePipe) { }
+  constructor(private url:APiService, private router:Router ,private  http:HttpClient,
+    private _snackBar: MatSnackBar,public dialog:MatDialog,private datePipe: DatePipe) { }
 
   ngOnInit(): void {
   }

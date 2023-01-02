@@ -25,13 +25,16 @@ import { DatePipe } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './components/profile/profile.component';
 import { APiService } from './service/api.service';
+import { UpdatedialogComponent } from './components/updatedialog/updatedialog.component';
+import { BtnCellRenderer } from './demo/BtnCellRenderer';
+import { BehaviorSubjectService } from './service/behaviorsubjectservice';
 
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,DemoComponent, LoginComponent, PostComponent,ViewComponent, DialogBoxComponent,
+    BtnCellRenderer, AppComponent,DemoComponent, LoginComponent, PostComponent,ViewComponent, UpdatedialogComponent,DialogBoxComponent, UpdatedialogComponent,
   ],
   imports: [
     BrowserModule,AgGridModule,
@@ -39,7 +42,7 @@ import { APiService } from './service/api.service';
     MatInputModule,HttpClientModule ,MatSnackBarModule,MatDialogModule,MatDatepickerModule,
     BrowserAnimationsModule
   ],
-  providers: [AppService,DatePipe,ProfileComponent,APiService],
+  providers: [AppService,DatePipe,ProfileComponent,APiService,UpdatedialogComponent,ViewComponent,BtnCellRenderer,BehaviorSubjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

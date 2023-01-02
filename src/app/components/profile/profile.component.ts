@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { data } from 'jquery';
 import { AuthService } from 'src/app/service/auth.service';
+import { BehaviorSubjectService } from 'src/app/service/behaviorsubjectservice';
 
 @Component({
   selector: 'app-profile',
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService:AuthService,private behaviorService:BehaviorSubjectService) { }
 
   ngOnInit(): void {
    
@@ -23,7 +24,14 @@ export class ProfileComponent implements OnInit {
   product!:String
   profile(){ 
 
-  this.authService.User.subscribe((data)=>{ 
+  // this.authService.User.subscribe((data)=>{ 
+  //   console.log("userdata",data)
+  //   this.name=data.name
+  //   this.emailId=data.email
+  //   this.product=data.productName
+  //   this.pws=data.pws
+  // })
+  this.behaviorService.loginUserData.subscribe((data)=>{
     console.log("userdata",data)
     this.name=data.name
     this.emailId=data.email

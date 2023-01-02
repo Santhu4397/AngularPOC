@@ -8,6 +8,7 @@ import{HttpClientModule} from '@angular/common/http'
 import { DemoComponent } from './demo.component';
 import { BtnCellRenderer1 } from './BtnCellRenderer1';
 import { APiService } from '../service/api.service';
+import { UpdatedialogComponent } from '../components/updatedialog/updatedialog.component';
 
 
 @NgModule({
@@ -17,8 +18,8 @@ import { APiService } from '../service/api.service';
   imports: [
     CommonModule,HttpClientModule,NgModule
   ],
-  providers: [AppService,AuthService],
-  bootstrap: [DemoComponent],
+  providers: [AppService,AuthService,BtnCellRenderer],
+  bootstrap: [DemoComponent], 
   exports:[DemoComponent]
 })
 export class DemoModule {
